@@ -1,0 +1,76 @@
+/* Atur gaya dasar untuk seluruh halaman */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  height: 100vh; /* tinggi penuh layar */
+  display: flex;
+  justify-content: center; /* rata tengah horizontal */
+  align-items: center; /* rata tengah vertikal */
+  margin: 0;
+}
+
+/* Kotak form login */
+form {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  width: 300px;
+}
+
+/* Judul halaman */
+h1 {
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 40px;
+  width: 100%;
+}
+
+/* Label input */
+label {
+  font-weight: bold;
+}
+
+/* Kolom input */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* Tombol login */
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #66a6ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #4e8ef7;
+}
+
+/* Link daftar */
+p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+a {
+  color: #4e8ef7;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
