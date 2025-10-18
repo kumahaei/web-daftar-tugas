@@ -1,27 +1,26 @@
-// Tunggu sampai halaman selesai dimuat
-document.addEventListener("DOMContentLoaded", function() {
-  
-  // Ambil elemen form login
-  const form = document.querySelector("form");
+// Tunggu sampai seluruh elemen DOM siap
+document.addEventListener('DOMContentLoaded', () => {
+  const signUpButton = document.getElementById('signUp');
+  const signInButton = document.getElementById('signIn');
+  const container = document.getElementById('container');
 
-  // Saat form dikirim
-  form.addEventListener("submit", function(event) {
-    event.preventDefault(); // Supaya halaman tidak langsung pindah
+  // Pastikan elemen-elemen ditemukan
+  if (!signUpButton || !signInButton || !container) {
+    console.warn("Beberapa elemen (signUp, signIn, container) tidak ditemukan di HTML.");
+    return;
+  }
 
-    // Ambil nilai dari input
-    const username = document.getElementById("username").value.trim();
-    const password = document.getElementById("password").value.trim();
+  console.log('UI elements found — attaching listeners');
 
-    // Cek apakah kolom kosong
-    if (username === "" || password === "") {
-      alert("Harap isi semua kolom!");
-      return;
-    }
+  // Ketika tombol "Daftar" diklik
+  signUpButton.addEventListener('click', () => {
+    console.log('signUp clicked');
+    container.classList.add('right-panel-active');
+  });
 
-    // Simpan nama pengguna di localStorage (sementara)
-    localStorage.setItem("username", username);
-
-    // Arahkan ke halaman dashboard
-    window.location.href = "dashboard.html";
+  // Ketika tombol "Masuk" diklik
+  signInButton.addEventListener('click', () => {
+    console.log('signIn clicked');
+    container.classList.remove('right-panel-active');
   });
 });
